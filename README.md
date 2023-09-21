@@ -1,1 +1,1 @@
-# Mamazon.github.io
+# Amazon.github.io
