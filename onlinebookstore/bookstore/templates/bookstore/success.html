@@ -1,0 +1,10 @@
+{% extends "bookstore/layout.html" %}
+{% load static %}
+
+{% block body %}
+    {{ message }}
+    <a href="{% url 'view_listing' id %}">{{ name }}</a>
+{% endblock %}
+
+{% block script %}
+{% endblock %}

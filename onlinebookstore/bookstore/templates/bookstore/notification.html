@@ -1,0 +1,18 @@
+{% extends "bookstore/layout.html" %}
+{% load static %}
+
+{% block body %}
+    {% if message %}
+    {{ message }}
+    {% else %}
+    {% for form, addd in forms, address %}
+        <div class="noti_details">
+            Name: {{ forms.name }}
+            Address: {{ addd.houseno }}
+        </div>
+    {% endfor %}
+    {% endif %}
+{% endblock %}
+
+{% block script %}
+{% endblock %}

@@ -1,0 +1,42 @@
+body {
+    padding: 10px;
+}
+
+.active_listing {
+    display: grid;
+    padding: 20px;
+    padding-left: 80px;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    grid-template-columns: 31% 31% 31%;
+}
+
+.active_listing_a {
+    border: solid black 1px;
+    height: 300px;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.active_listing_a:hover {
+    color: grey;
+    text-decoration: none;
+}
+
+#view_listing_div {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+#view_listing_input {
+    height: 45px;
+    width: 120px;
+    padding: 5px;
+    background-color: rgb(75, 157, 223);
+    color: whitesmoke;
+    border-radius: 7px;
+    border-color: rgb(60, 116, 190);
+}

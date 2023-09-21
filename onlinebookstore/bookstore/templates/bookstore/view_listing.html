@@ -1,0 +1,18 @@
+{% extends "bookstore/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div id="view_listing_div">
+    Name of the Book: {{ form.name }}<br>
+    Price: {{ form.price }}<br>
+    Description: {{ form.description }}<br>
+    {% if user.is_authenticated %}
+    {% if form.seller != request.user %}
+        <form action="{% url 'buy_listing' form.id %}" id="buy_listing">
+            <input type="submit" value="Buy" id="view_listing_input"><br>
+        </form>
+        <a href="{% url 'add_cart' form.id %}">{{ cart }}</a><br>
+    {% endif %}
+    {% endif %}
+</div>
+{% endblock %}

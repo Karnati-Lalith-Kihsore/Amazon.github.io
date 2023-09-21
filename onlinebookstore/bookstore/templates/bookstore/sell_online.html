@@ -1,0 +1,17 @@
+{% extends "bookstore/layout.html" %}
+{% load static %}
+{% block body %}
+    <div id="sell_online_div">
+        <form action="{% url 'sell_online' %}" method="post">
+            {% csrf_token %}
+            Name: {{ form.name }}
+            Description: {{ form.description}}
+            Price: {{ form.price }}
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'bookstore/sell_online.js' %}"></script>
+{% endblock %}

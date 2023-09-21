@@ -1,0 +1,20 @@
+{% extends "bookstore/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <form action="{% url 'get_user_details' %}" method="post">
+        {% csrf_token %}
+        <h3>Address</h3>
+        House number: {{ form.houseno }}
+        Street Number: {{ form.streetno }}
+        Village/Town: {{ form.village }}
+        District: {{ form.district }}
+        State: {{ form.state }}
+        Pincode: {{ form.pincode }}
+        Phone Number: {{ form.phonenumber }}
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}
+
+{% block script %}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "bookstore/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div class="active_listing">
+    {% for form in listings %}
+        <a class="active_listing_a" href="{% url 'view_listing' form.id %}">
+            Name: {{ form.name }}<br>
+            Price: {{ form.price }}
+        </a>
+    {% endfor %}
+</div>
+{% endblock %}
